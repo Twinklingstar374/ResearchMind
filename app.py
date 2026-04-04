@@ -1,11 +1,23 @@
-from utils.embeddings import create_vector_store
+import streamlit as st
+from agent.researcher import run_research
 
-chunks = [
-    "Artificial intelligence is transforming industries.",
-    "Quantum computing uses qubits instead of classical bits.",
-    "Machine learning models learn patterns from data."
-]
+st.set_page_config(
+    page_title="ResearchMind AI",
+    page_icon="🔎",
+    layout="wide"
+)
 
-vector_db = create_vector_store(chunks)
+st.title("🔎 ResearchMind AI")
+st.write("Generate structured research briefs from real web sources.")
 
-print("Vector database created successfully!")
+query = st.text_input("Enter a research topic")
+
+if st.button("Generate Research Brief"):
+
+    if query.strip() == "":
+        st.warning("Please enter a research topic.")
+    else:
+        with st.spinner("Researching..."):
+            result = run_research(query)
+
+        st.markdown(result)

@@ -12,6 +12,12 @@ def get_or_create_collection(collection_name: str = "research"):
     return chroma_client.get_or_create_collection(name=collection_name)
 
 def embed_and_store(chunks: list[dict], collection_name: str = "research"):
+    # Delete old collection and create fresh one each time
+    try:
+        chroma_client.delete_collection(name=collection_name)
+    except:
+        pass
+    
     collection = get_or_create_collection(collection_name)
     
     texts = [chunk["text"] for chunk in chunks]

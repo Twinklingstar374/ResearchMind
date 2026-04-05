@@ -45,22 +45,21 @@ Every research brief contains:
 - **Sources** — all URLs used
 
 ---
-## Tech Stack
+**Tech Stack**
+Layer 	Technology
+Web Retrieval -	Tavily API
+Chunking  -	LangChain Text Splitter
+Embeddings - HuggingFace (all-MiniLM-L6-v2)
+Vector Database - ChromaDB
+LLM -	Groq (LLaMA 3.1-8B Instant)
+Orchestration -	LangChain
+Frontend - Streamlit
+Deployment	- Streamlit Cloud
 
-| Layer | Tool |
-|-------|------|
-| Web Search | Tavily API |
-| Text Splitting | LangChain Text Splitters |
-| Embeddings | HuggingFace all-MiniLM-L6-v2 |
-| Vector Store | ChromaDB |
-| LLM | Groq + LLaMA 3.1-8b-instant |
-| Orchestration | LangChain |
-| Frontend | Streamlit |
-| Deployment | Streamlit Cloud |
 
----
+
 ## Run locally
-```bash
+
 # Clone the repo
 git clone https://github.com/Twinklingstar374/ResearchMind
 cd ResearchMind
@@ -80,9 +79,7 @@ touch .env
 
 # Run
 streamlit run app.py
-```
 
----
 
 ## API Keys needed
 
@@ -90,8 +87,6 @@ streamlit run app.py
 |-----|---------------|
 | Tavily API | [tavily.com](https://tavily.com) |
 | Groq API | [console.groq.com](https://console.groq.com) |
-
----
 
 ## Key engineering decisions
 

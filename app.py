@@ -84,7 +84,7 @@ query = st.text_input(
     label_visibility="collapsed"
 )
 
-col1, col2, col3 = st.columns([1, 1, 5])
+col1, col2, col3 = st.columns([1.5, 1, 4.5])
 with col1:
     search_btn = st.button("Generate", type="primary", use_container_width=True)
 with col2:

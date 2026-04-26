@@ -17,4 +17,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git push https://bulbulagarwalla:$HF_TOKEN@huggingface.co/spaces/bulbulagarwalla/ResearchMind main
+          git push https://bulbulagarwalla:$HF_TOKEN@huggingface.co/spaces/agarwallabulbul/ResearchMind main

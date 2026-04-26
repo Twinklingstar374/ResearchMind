@@ -1,3 +1,12 @@
+---
+title: ResearchMind
+emoji: 🤖
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 <div align="center">
   <h1>🔬 ResearchMind</h1>
   <p><strong>Agentic, Chat-Based AI Research Assistant</strong></p>

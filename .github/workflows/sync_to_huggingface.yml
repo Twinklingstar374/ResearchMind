@@ -17,4 +17,10 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-         git push --force https://agarwallabulbul:$HF_TOKEN@huggingface.co/spaces/agarwallabulbul/ResearchMind main
+          rm -rf .git
+          git init
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Deploy to Hugging Face"
+          git push --force https://agarwallabulbul:$HF_TOKEN@huggingface.co/spaces/agarwallabulbul/ResearchMind master:main

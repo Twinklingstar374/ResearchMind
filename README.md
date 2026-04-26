@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="images/bg.png" alt="ResearchMind Banner" width="100%">
-  
   <h1>🔬 ResearchMind</h1>
   <p><strong>Agentic, Chat-Based AI Research Assistant</strong></p>
 
@@ -12,12 +10,6 @@
   <br>
   
   **Live Demo → [researchmind.streamlit.app](https://researchmind-idvhtpjhjwmt4zuydlztjv.streamlit.app/)**
-</div>
-
-<br>
-
-<div align="center">
-  <img src="images/Deployed.png" alt="ResearchMind UI" width="800" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
 </div>
 
 ---

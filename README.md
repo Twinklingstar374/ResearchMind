@@ -8,6 +8,10 @@
   [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
   [![Powered by Groq](https://img.shields.io/badge/Powered%20by-Groq-f59e0b?logo=groq&logoColor=white)](https://groq.com/)
   [![LangChain](https://img.shields.io/badge/Built%20with-LangChain-green.svg)](https://python.langchain.com/)
+  
+  <br>
+  
+  **Live Demo → [researchmind.streamlit.app](https://researchmind-idvhtpjhjwmt4zuydlztjv.streamlit.app/)**
 </div>
 
 <br>

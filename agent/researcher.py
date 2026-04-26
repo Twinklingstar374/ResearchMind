@@ -43,14 +43,38 @@ def run_research(query: str):
     )
 
     # 6️⃣ Call the LLM
-    llm = ChatGroq(
-        model="llama-3.1-8b-instant",
-        temperature=0.2
-    )
+    try:
+        models_to_try = [
+            "llama-3.3-70b-versatile",
+            "llama-3.1-70b-versatile", 
+            "gemma2-9b-it"
+        ]
+        
+        response = None
+        last_e = None
+        
+        for model_name in models_to_try:
+            try:
+                llm = ChatGroq(
+                    model=model_name,
+                    temperature=0.2,
+                    max_tokens=1024
+                )
+        
+                response = llm.invoke([
+                    {"role": "system", "content": RESEARCH_SYSTEM_PROMPT},
+                    {"role": "user", "content": user_prompt}
+                ])
+                break
+            except Exception as e:
+                last_e = e
+                continue
+                
+        if response is None:
+            raise last_e
 
-    response = llm.invoke([
-        {"role": "system", "content": RESEARCH_SYSTEM_PROMPT},
-        {"role": "user", "content": user_prompt}
-    ])
-
-    return response.content
+        return response.content
+    except Exception as e:
+        if "413" in str(e) or "rate_limit" in str(e) or "too large" in str(e).lower():
+            return "The research context is too large. Please try a shorter or more specific topic."
+        return f"Error: {e}"

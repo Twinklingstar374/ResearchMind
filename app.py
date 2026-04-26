@@ -4,8 +4,13 @@ Streamlit Custom UI Version - Fixed Layout
 """
 
 import streamlit as st
+import sys
+import os
 from uuid import uuid4
 from datetime import datetime
+
+# Ensure Streamlit Cloud correctly resolves local modules
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from agent.brain import ResearchAgent
 from memory.chat_memory import ResearchMemory

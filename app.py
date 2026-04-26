@@ -3,8 +3,12 @@ ResearchMind — Agentic Chat-Based Research Assistant
 Streamlit Custom UI Version - Fixed Layout
 """
 
-import streamlit as st
+# ── ChromaDB Streamlit Cloud Fix ──
+__import__('pysqlite3')
 import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
+import streamlit as st
 import os
 from uuid import uuid4
 from datetime import datetime

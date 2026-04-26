@@ -9,3 +9,4 @@ python-dotenv>=1.0.1
 fpdf2>=2.7.9
 sentence-transformers>=2.7.0
 markdown>=3.4.1
+pysqlite3-binary

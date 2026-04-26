@@ -6,10 +6,11 @@ Streamlit Custom UI Version - Fixed Layout
 # ── ChromaDB Streamlit Cloud Fix ──
 __import__('pysqlite3')
 import sys
+import os
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 
 import streamlit as st
-import os
 from uuid import uuid4
 from datetime import datetime
 
